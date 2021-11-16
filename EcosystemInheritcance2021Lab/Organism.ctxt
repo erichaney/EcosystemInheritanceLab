@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=Organism
+comment0.text=\n\ Organism\ is\ an\ abstract\ class\ that\ all\ living\ creatures\ inherit\ their\ base\ code\ from.\n\ \n\ All\ organisms\ have\ a\ reference\ to\ an\ Ecosystem\ that\ represents\ the\ shared\ world\ that\ \n\ they\ inhabit\ with\ one\ another.\ Organisms\ have\ a\ position\ (integer\ coordinates)\ within\n\ this\ world\ and\ remain\ alive\ until\ they\ are\ eaten\ or\ die\ of\ some\ other\ cause.\n
+comment1.params=world\ x\ y
+comment1.target=Organism(Ecosystem,\ int,\ int)
+comment1.text=\n\ Constructor\ for\ Organisms.\n\ \n\ Since\ Organism\ is\ an\ abstract\ class,\ this\ can\ never\ be\ called\ directly\ to\ make\ "Organism\ objects".\n\ However,\ it\ is\ still\ convenient\ to\ have\ a\ constructor\ so\ that\ objects\ of\ the\ subclasses\ can\ be\ \n\ created\ more\ efficiently.\ \n
+comment2.params=
+comment2.target=void\ update()
+comment2.text=\n\ Allows\ the\ organism\ to\ perform\ the\ actions\ it\ wishes\ to\ perform\ while\ the\ simulation\ is\ running.\n\ \n\ Each\ distinct\ species\ must\ override\ this\ method\ to\ allow\ movement,\ eating,\ and\ any\ other\ survival\ \n\ strategies\ it\ knows\ how\ to\ perform\ during\ its\ turn.\n
+comment3.params=otherOrg
+comment3.target=int\ getDistanceTo(Organism)
+comment3.text=\n\ Returns\ the\ grid-based\ distance\ between\ this\ organism\ and\ the\ other\ organism.\n\ \n\ In\ the\ square\ grid\ used\ by\ Ecosystem,\ vertical,\ horizontal,\ and\ diagonal\ movements\n\ are\ each\ considered\ 1\ unit\ of\ distance.\ Therefore\ the\ "distance"\ between\ two\ organisms\n\ will\ be\ the\ minimum\ number\ of\ moves\ between\ them\ rather\ than\ the\ usual\ Pythagorean\ distance.\n\ \n\ @param\ otherOrg\ The\ other\ organism\ that\ this\ organism\ will\ measure\ the\ distance\ to.\n\ @returns\ The\ grid-based\ distance\ between\ this\ organism\ and\ the\ other\ organism.\n
+comment4.params=otherOrg
+comment4.target=boolean\ hasSameLocationAs(Organism)
+comment4.text=\n\ Returns\ true\ if\ the\ distance\ between\ this\ organism\ and\ the\ other\ organism\ is\ zero.\n\ \n\ Two\ organisms\ have\ the\ same\ location\ if\ their\ coordinates\ are\ the\ same,\ or\ equivalently\n\ if\ the\ distance\ between\ them\ is\ zero.\n\ \n\ @return\ True\ if\ this\ organism\ has\ the\ same\ location\ as\ the\ other\ organism,\ and\ false\ otherwise.\n
+comment5.params=species
+comment5.target=Organism\ getNearest(java.lang.Class)
+comment5.text=\n\ Finds\ the\ nearest\ living\ organism\ of\ the\ given\ species\ to\ this\ organism\ or\ null\ if\ none\ can\ be\ found.\ \n\ \n\ For\ instance,\ a\ rabbit\ object\ might\ call\ this.getNearest(Grass.class)\ in\ its\ search\ for\ food,\n\ this.getNearest(Fox.class)\ to\ sense\ if\ it\ is\ in\ danger,\ or\ this.getNearest(Rabbit.class)\ to\ search\n\ for\ a\ mate.\ \n\ \n\ An\ object\ calling\ this\ method\ is\ guaranteed\ to\ NOT\ receive\ itself\ back\ as\ a\ return\ value\!\n\ \n\ @param\ species\ The\ class\ of\ the\ target\ species\ to\ search\ for.\n\ @return\ The\ nearest\ living\ organism\ object\ matching\ the\ given\ species\ or\ null.\n
+comment6.params=
+comment6.target=java.lang.String\ toString()
+comment6.text=\n\ Displays\ the\ species\ name\ along\ with\ its\ coordinates.\n\ \n\ This\ string\ of\ text\ will\ display\ whenever\ an\ object\ inheriting\ from\ this\ class\n\ is\ passed\ into\ System.out.println().\ For\ instance,\ printing\ a\ grass\ object\ will\n\ display\ something\ like\ "Grass[5,\ 19]"\ instead\ of\ the\ memory\ location\ of\ the\ object.\n
+numComments=7

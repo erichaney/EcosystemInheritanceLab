@@ -1,0 +1,24 @@
+#BlueJ class context
+comment0.target=Animal
+comment1.params=world\ x\ y\ hunger
+comment1.target=Animal(Ecosystem,\ int,\ int,\ int)
+comment1.text=\#\ TODO\:\n\ Declare\ the\ following\ field\:\n\ -\ hunger\:\ an\ integer\ to\ determine\ whether\ the\ animal\ can\ eat\ or\ will\ remain\ alive\n
+comment2.params=
+comment2.target=void\ move()
+comment2.text=\n\ The\ default\ move\ of\ an\ animal\ is\ to\ move\ one\ space\ randomly\ or\ to\ stay\ put.\n\ \n\ The\ move\ may\ be\ horizontal,\ vertical,\ diagonal,\ or\ no\ change\ in\ location.\n\ That\ means\ the\ animal's\ x\ and\ y\ coordinates\ may\ change\ by\ +1,\ 0,\ or\ -1.\n\ However,\ the\ x\ and\ y\ coordinates\ may\ not\ be\ negative\ after\ the\ move\ and\n\ an\ animal's\ x-coordinates\ must\ remain\ less\ than\ world.WIDTH\ and\n\ an\ animal's\ y-coordinates\ must\ remain\ less\ than\ world.HEIGHT.\n
+comment3.params=
+comment3.target=boolean\ isHungry()
+comment3.text=\n\ By\ default,\ an\ animal\ is\ hungry\ enough\ to\ eat\ if\ its\ hunger\ level\ rises\ above\ ???.\n\ \n\ This\ method\ will\ usually\ be\ overridden\ in\ the\ subclasses.\ Larger\ animals\n\ will\ typically\ grow\ hungrier\ than\ smaller\ animals\ without\ needing\ to\ eat.\n\ \n\ @return\ True\ if\ the\ animal\ is\ hungry\ enough\ to\ eat,\ and\ false\ otherwise.\n
+comment4.params=
+comment4.target=boolean\ hasStarvedToDeath()
+comment4.text=\n\ By\ default,\ an\ animal\ has\ starved\ to\ death\ if\ its\ hunger\ level\ rises\ above\ ???.\n\ \n\ This\ method\ will\ usually\ be\ overridden\ in\ the\ subclasses.\ Larger\ animals\n\ will\ typically\ grow\ hungrier\ than\ smaller\ animals\ without\ dying.\n\ \n\ @return\ True\ if\ the\ animal\ too\ hungry\ to\ remain\ alive,\ and\ false\ otherwise.\n
+comment5.params=otherOrg
+comment5.target=boolean\ canEat(Organism)
+comment5.text=\n\ Returns\ true\ if\ the\ Animal\ can\ eat\ the\ given\ Organism.\n\ \n\ By\ default,\ an\ animal\ can\ eat\ another\ living\ organism\ if\ it\ has\ the\ same\ location\ as\ it\n\ and\ the\ other\ organism\ is\ not\ the\ same\ species\ (class)\ as\ it\ (eww...\ cannibalism).\n\ Typically\ this\ method\ will\ be\ overridden\ by\ the\ subclass\ so\ that\ they\ will\ only\ eat\n\ species\ that\ are\ considered\ prey.\ For\ example,\ objects\ of\ the\ Fox\ class\ will\ make\ sure\n\ that\ otherOrg.getClass()\ \=\=\ Rabbit.class.\ And\ objects\ of\ the\ Rabbit\ class\ will\ check\n\ to\ see\ if\ otherOrg.getClass()\ \=\=\ Grass.class.\n\ \n\ @return\ True\ if\ this\ Animal\ is\ able\ to\ eat\ the\ given\ Organism,\ and\ false\ otherwise.\n
+comment6.params=
+comment6.target=void\ eat()
+comment6.text=\n\ Restores\ ???\ hunger\ points\ if\ this\ Animal\ is\ hungry\ and\ is\ able\ to\ eat\ another\ Organism\ at\n\ its\ current\ location.\ The\ consumed\ organism\ will\ be\ killed.\n\ \n\ Typically\ this\ method\ will\ be\ overridden\ in\ the\ subclasses\ where\ it\ may\ restore\ a\ different\n\ amount\ of\ hunger\ based\ on\ the\ species\ of\ organism\ that\ is\ consumed.\n
+comment7.params=
+comment7.target=java.lang.String\ toString()
+comment7.text=\n\ Displays\ the\ species\ name\ along\ with\ its\ coordinates\ and\ hunger\ level.\n\ \n\ This\ string\ of\ text\ will\ display\ whenever\ an\ object\ inheriting\ from\ this\ class\n\ is\ passed\ into\ System.out.println().\ For\ instance,\ printing\ a\ rabbit\ object\ will\n\ display\ something\ like\ "Rabbit[5,\ 19](25)"\ instead\ of\ the\ memory\ location\ of\ the\ object.\n
+numComments=8

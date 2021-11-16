@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=Grass
+comment1.params=world\ x\ y
+comment1.target=Grass(Ecosystem,\ int,\ int)
+comment1.text=\n\ Constructs\ grass\ objects\ with\ an\ Ecosystem\ reference\ and\ coordinates.\n
+comment2.params=
+comment2.target=void\ update()
+numComments=3
