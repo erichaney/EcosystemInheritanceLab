@@ -126,7 +126,7 @@ class Organism
             //# Check if org is alive. 
             //# Check if 'this' is not equal to org. 
             //# Check if org.getClass() is equal to species 
-            //# Check if distanceTo 'this' and org is less than the distanceTo nearestSoFar.
+            //# Check if getDistanceTo(org) is less than getDistanceTo(nearestSoFar).
             //# If so, set nearestSoFar equal to org
             
             
