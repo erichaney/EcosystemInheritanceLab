@@ -129,13 +129,7 @@ class Organism
             //# Check if distanceTo 'this' and org is less than the distanceTo nearestSoFar.
             //# If so, set nearestSoFar equal to org
             
-            if(!this.equals(org) &&
-            org.isAlive &&
-            org.getClass() == species &&
-            this.getDistanceTo(org) < this.getDistanceTo(nearestSoFar))
-            {
-                nearestSoFar = org;
-            }
+            
         }
         return nearestSoFar;
         */
